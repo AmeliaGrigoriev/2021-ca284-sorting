@@ -4,7 +4,7 @@
 int * readfile(char filename[], int amount)
 {
     int num;
-    static int *numbers;
+    int *numbers = (int *)malloc(sizeof(int) * amount);
 
     FILE * file = fopen(filename, "r");
 
