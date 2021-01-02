@@ -14,14 +14,18 @@ int main(int argc, char *argv[])
 
 int numgen(int amount)
 {
+   FILE * file = fopen("../test/nums.txt", "w");
+
    srand(time(0));
 
    int count = 0;
 
    for(int i = 0; i < amount; i++){
-      printf("%d\n", rand());
+      fprintf(file, "%d\n", rand() % 100);
       count += 1;
    }
+
+   fclose(file);
 
    return 0;
 }
