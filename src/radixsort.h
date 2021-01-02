@@ -17,7 +17,7 @@ int maxnum(int numbers[], int amount)
 
 void countingsort(int numbers[], int amount, int pos)
 {
-    int output[amount + 1];
+    int * output = (int *)malloc(sizeof(int) * (amount+1));
     int max = (numbers[0] / pos) % 10;
     int i;
 
@@ -28,7 +28,7 @@ void countingsort(int numbers[], int amount, int pos)
         }
     }
 
-    int count[max + 1];
+    int * count = (int *)malloc(sizeof(int) * (max+1));
 
     for(i = 0; i < max; ++i){
         count[i] = 0;
