@@ -21,7 +21,7 @@ int numgen(int amount)
    int count = 0;
 
    for(int i = 0; i < amount; i++){
-      fprintf(file, "%d\n", rand() % 100);
+      fprintf(file, "%d\n", rand() % 100000);
       count += 1;
    }
 
