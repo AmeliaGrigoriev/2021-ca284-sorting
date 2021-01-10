@@ -75,7 +75,7 @@ void countingsort(int numbers[], int amount, int pos)
     }
 }
 
-int * radixsort(int numbers[], int amount)
+int * radix(int numbers[], int amount)
 {
     int pos;
     int max = maxnum(numbers, amount);
@@ -113,7 +113,7 @@ void heapify(int numbers[], int amount, int i)
     }
 }
 
-int * heapsort(int numbers[], int amount)
+int * heap(int numbers[], int amount)
 {
     int i;
 
