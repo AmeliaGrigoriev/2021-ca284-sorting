@@ -1,25 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "readfile.h"
 #include "selectionsort.h"
 #include "radixsort.h"
 #include "heapsort.h"
+#include "numgen.h"
 
 #define SEPARATOR "\n--------------------------------------------------------------------\n\n"
 #define INVALID_INPUT "The number you entered is not an option!\n"
 #define SELEC "Selection Sort"
 #define RADIX "Radix Sort"
 #define HEAP "Heap Sort"
-#define SORTED "Here are your numbers sorted using"
+#define SORTED "Your numbers were sorted using"
 
 int main()
 {
     int * numbers, * sorted, amount, method, order;
+    double time = 0.0;
 
     printf("%s", SEPARATOR);
 
     printf("Please enter the amount of numbers you would like to sort: ");
     scanf("%d", &amount);
+
+    numgen(amount);
 
     printf("%s", SEPARATOR);
 
@@ -42,21 +47,30 @@ int main()
     }
 
     if(method == 1){
+        clock_t begin = clock();
         sorted = selecsort_asc(numbers, amount);
-        printf("%s %s:\n\n", SORTED, SELEC);
+        clock_t end = clock();
+        printf("%s %s.\n", SORTED, SELEC);
+        printf("It took %f seconds\n", time);
     }
 
     else if(method == 2){
+        clock_t begin = clock();
         sorted = radixsort_asc(numbers, amount);
-        printf("%s %s:\n\n", SORTED, RADIX);
+        clock_t end = clock();
+        printf("%s %s.\n", SORTED, RADIX);
+        printf("It took %f seconds\n", time);
     }
 
     else if(method == 3){
+        clock_t begin = clock();
         sorted = heapsort_asc(numbers, amount);
-        printf("%s %s:\n\n", SORTED, HEAP);
+        clock_t end = clock();
+        printf("%s %s.\n", SORTED, HEAP);
+        printf("It took %f seconds\n", time);
     }
 
-    FILE * file = fopen("../test/sorted.txt", "w");
+    FILE * file = fopen("../test/nums.txt", "w");
 
     for(int i = 0; i < amount; i++){
         fprintf(file, "%d\n", sorted[i]);
