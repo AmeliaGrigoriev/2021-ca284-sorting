@@ -1,0 +1,103 @@
+------------------------------
+SELECTION SORT                 
+------------------------------
+REVERSE SORTED DATA:
+10 integers: 0.000006 seconds
+1000 integers: 0.002882 seconds
+100000 integers: 11.191143 seconds
+1000000 integers: DNF
+2000000 integers: DNF
+5000000 integers: DNF
+
+PARTIALLY SORTED DATA:
+10 integers: 0.000005 seconds
+1000 integers: 0.002837 seconds
+100000 integers: 10.265835 seconds
+1000000 integers: DNF
+2000000 integers: DNF
+5000000 integers: DNF
+
+NUMERICALLY SORTED DATA:
+10 integers: 0.000005 seconds
+1000 integers: 0.002764 seconds
+100000 integers: 10.241505 seconds
+1000000 integers: DNF
+2000000 integers: DNF
+5000000 integers: DNF
+
+RANDOM DATA:
+10 integers: 0.000007 seconds
+1000 integers: 0.002374 seconds
+100000 integers: 10.286341 seconds
+1000000 integers: DNF
+2000000 integers: DNF
+5000000 integers: DNF
+------------------------------
+RADIX SORT
+------------------------------
+REVERSE SORTED DATA:
+10 integers: 0.014654 seconds
+1000 integers: 0.024181 seconds
+100000 integers: 0.050168 seconds
+1000000 integers: 0.191152 seconds
+2000000 integers: 0.330410 seconds
+5000000 integers: 0.963219 seconds
+
+PARTIALLY SORTED DATA:
+10 integers: 0.018575 seconds
+1000 integers: 0.008210 seconds
+100000 integers: 0.030001 seconds
+1000000 integers: 0.162749 seconds
+2000000 integers: 0.408886 seconds
+5000000 integers: 0.917191 seconds
+
+NUMERICALLY SORTED DATA:
+10 integers: 0.015711 seconds
+1000 integers: 0.016453 seconds
+100000 integers: 0.030592 seconds
+1000000 integers: 0.176544 seconds
+2000000 integers: 0.335786 seconds
+5000000 integers: 0.848639 seconds
+
+RANDOM DATA:
+10 integers: 0.022592 seconds
+1000 integers: 0.019334 seconds
+100000 integers: 0.038445 seconds
+1000000 integers: 0.181096 seconds
+2000000 integers: 0.325203 seconds
+5000000 integers: 0.779229 seconds
+
+------------------------------
+HEAP SORT
+------------------------------
+REVERSE SORTED DATA:
+10 integers: 0.000008 seconds
+1000 integers: 0.000445 seconds
+100000 integers: 0.030762 seconds
+1000000 integers: 0.247267 seconds
+2000000 integers: 0.499864 seconds
+5000000 integers: 1.294027 seconds
+
+PARTIALLY SORTED DATA:
+10 integers: 0.000004 seconds
+1000 integers: 0.000484 seconds
+100000 integers: 0.037881 seconds
+1000000 integers: 0.330419 seconds
+2000000 integers: 0.746747 seconds
+5000000 integers: 2.493618 seconds
+
+NUMERICALLY SORTED DATA:
+10 integers: 0.000005 seconds
+1000 integers: 0.000443 seconds
+100000 integers: 0.031957 seconds
+1000000 integers: 0.253777 seconds
+2000000 integers: 0.610008 seconds
+5000000 integers: 1.396977 seconds
+
+RANDOM DATA:
+10 integers: 0.000009 seconds
+1000 integers: 0.000371 seconds
+100000 integers: 0.044391 seconds
+1000000 integers: 0.402293 seconds
+2000000 integers: 0.918422 seconds
+5000000 integers: 2.924825 seconds
