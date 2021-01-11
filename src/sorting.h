@@ -1,6 +1,12 @@
+/* header file with three sorting algorithms */ 
+/* includes */
 #include <stdio.h>
 #include <stdlib.h>
 
+/* this file contains my three sorting algorithms. selection sort, radix dort and heap sort */
+
+/* first sorting algorithm - selection sort, takes an array and the amount of integers in the array as parameters */
+/* used https://www.programmingsimplified.com/c/source-code/c-program-selection-sort for help with selection sort */
 int * selecsort(int numbers[], int amount)
 {
     int i, pos, next, tmp;
@@ -21,9 +27,12 @@ int * selecsort(int numbers[], int amount)
         }
     }
 
-    return numbers;
+    return numbers; /* return sorted array */
 }
 
+/* used https://www.programiz.com/dsa/radix-sort for help with radix sort */
+/* functions that will be used for radix sort - maxnum and countingsort */
+/* maxnum function finds the max number in an array, takes an array and the amount of integers in the array as parameters */
 int maxnum(int numbers[], int amount)
 {
     int max, next, i;
@@ -38,6 +47,7 @@ int maxnum(int numbers[], int amount)
     return max;
 }
 
+/* Using counting sort to sort the elements in the basis of significant places */
 void countingsort(int numbers[], int amount, int pos)
 {
     int * output = (int *)malloc(sizeof(int) * (amount+1));
@@ -75,6 +85,7 @@ void countingsort(int numbers[], int amount, int pos)
     }
 }
 
+/* second sorting algorithm - radix sort */
 int * radix(int numbers[], int amount)
 {
     int pos;
@@ -84,15 +95,19 @@ int * radix(int numbers[], int amount)
         countingsort(numbers, amount, pos);
     }
 
-    return numbers;
+    return numbers; /* return sorted array */
 }
 
+/* used https://www.programiz.com/dsa/heap-sort for help with heap sort */
+/* functions used for heap sort - heapify and swap */
+/* swap functon swaps two characters */
 void swap(int *a, int *b){
     int tmp = *a;
     *a = *b;
     *b = tmp;
 }
 
+/* heapify function finds largest among root, left child and right child */
 void heapify(int numbers[], int amount, int i)
 {
     int largest = i;
@@ -113,6 +128,7 @@ void heapify(int numbers[], int amount, int i)
     }
 }
 
+/* third sorting algorithm - heap sort */
 int * heap(int numbers[], int amount)
 {
     int i;
@@ -126,5 +142,5 @@ int * heap(int numbers[], int amount)
         heapify(numbers, i, 0);
     }
 
-    return numbers;
+    return numbers; /* return sorted array */
 }
