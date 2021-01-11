@@ -5,7 +5,7 @@ REVERSE SORTED DATA:
 10 integers: 0.000006 seconds
 1000 integers: 0.002882 seconds
 100000 integers: 11.191143 seconds
-1000000 integers: DNF
+1000000 integers: 2269.534660 seconds
 2000000 integers: DNF
 5000000 integers: DNF
 
@@ -13,7 +13,7 @@ PARTIALLY SORTED DATA:
 10 integers: 0.000005 seconds
 1000 integers: 0.002837 seconds
 100000 integers: 10.265835 seconds
-1000000 integers: DNF
+1000000 integers: 1159.282291 seconds
 2000000 integers: DNF
 5000000 integers: DNF
 
@@ -21,7 +21,7 @@ NUMERICALLY SORTED DATA:
 10 integers: 0.000005 seconds
 1000 integers: 0.002764 seconds
 100000 integers: 10.241505 seconds
-1000000 integers: DNF
+1000000 integers: 1239.036384 seconds
 2000000 integers: DNF
 5000000 integers: DNF
 
@@ -29,7 +29,7 @@ RANDOM DATA:
 10 integers: 0.000007 seconds
 1000 integers: 0.002374 seconds
 100000 integers: 10.286341 seconds
-1000000 integers: DNF
+1000000 integers: 1199.512248 seconds
 2000000 integers: DNF
 5000000 integers: DNF
 ------------------------------
