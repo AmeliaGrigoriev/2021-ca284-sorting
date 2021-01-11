@@ -8,8 +8,8 @@
 #include "data.h"
 
 /* defines */
-#define SEPARATOR "\n--------------------------------------------------------------------\n\n"
-#define INVALID_INPUT "The number you entered is not an option!\n"
+#define SEPARATOR "\n********************************************************************\n\n"
+#define INVALID_INPUT "That is not an option! Please try again and enter a different number!\n"
 #define SELEC "Selection Sort"
 #define RADIX "Radix Sort"
 #define HEAP "Heap Sort"
@@ -34,12 +34,12 @@ int main()
     numbers = readfile("../test/nums.txt", amount);
 
     /* asks what order the user wants their generated numbers in */
-    printf("How would you like to generate your data?\n\n");
-    printf("Enter '1' to generate data in reverse order\n");
-    printf("Enter '2' to generate partially sorted data\n");
-    printf("Enter '3' to generate numerically sorted data\n");
-    printf("Enter '4' to generate data in random order\n\n");
-    printf("Please enter '1', '2', '3' or '4': ");
+    printf("Please choose a way to manipulate your dataset:\n\n");
+    printf("1) Data sorted in descending order\n");
+    printf("2) Partially sorted data\n");
+    printf("3) Numerically sorted data\n");
+    printf("4) Data in random order\n\n");
+    printf("Please choose either '1', '2', '3' or '4': ");
     scanf("%d", &data);
 
     printf("%s", SEPARATOR);
@@ -47,6 +47,7 @@ int main()
     if(data != 1 && data != 2 && data != 3 && data != 4){
         printf("%s", INVALID_INPUT);
         printf("%s", SEPARATOR);
+        exit(0);
     }
 
     if(data == 1){
@@ -68,12 +69,11 @@ int main()
     }
     
     /* asks the user which sorting algorithm they would like the numbers to be sorted with */
-    printf("Please choose the sorting algorithm you would like to use.\n\n");
-    printf("Enter '1' for %s\n", SELEC);
-    printf("Enter '2' for %s\n", RADIX);
-    printf("Enter '3' for %s\n", HEAP);
-    printf("\nWhich sorting alorithm would you like to use?\n");
-    printf("Please enter '1', '2' or '3': ");
+    printf("Please choose a sorting algorithm:\n\n");
+    printf("1) %s\n", SELEC);
+    printf("2) %s\n", RADIX);
+    printf("3) %s\n\n", HEAP);
+    printf("Please choose either '1', '2' or '3': ");
     scanf("%d", &method);
 
     printf("%s", SEPARATOR);
@@ -90,7 +90,7 @@ int main()
         clock_t end = clock(); /* stops the clock */
         time += (double)(end - begin) / CLOCKS_PER_SEC; /* calculates the time */
         printf("%s %s.\n", SORTED, SELEC);
-        printf("It took %f seconds\n", time);
+        printf("It took %f seconds to sort your data.\n", time);
     }
 
     else if(method == 2){
@@ -99,7 +99,7 @@ int main()
         clock_t end = clock(); /* stops the clock */
         time += (double)(end - begin) / CLOCKS_PER_SEC; /* calculates the time */
         printf("%s %s.\n", SORTED, RADIX);
-        printf("It took %f seconds\n", time);
+        printf("It took %f seconds to sort your data.\n", time);
     }
 
     else if(method == 3){
@@ -108,7 +108,7 @@ int main()
         clock_t end = clock(); /* stops the clock */
         time += (double)(end - begin) / CLOCKS_PER_SEC; /* calculates the time */
         printf("%s %s.\n", SORTED, HEAP);
-        printf("It took %f seconds\n", time);
+        printf("It took %f seconds to sort your data.\n", time);
     }
 
     FILE * file = fopen("../test/nums.txt", "w"); /* opens the file to write to it */
